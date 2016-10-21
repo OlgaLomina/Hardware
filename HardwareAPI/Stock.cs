@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HardwareAPI
 {
-    static class Stock
+    public static class Stock
     {
         #region Properties
 
@@ -14,31 +14,34 @@ namespace HardwareAPI
 
         public static string Address { get; set; }
 
-        // Collection of Input Devices
-        public static List<InputDevice> InputDevices { get; set; }
+        // Collection of Keyboards
+        public static List<Keyboard> Keyboards { get; set; }
 
         #endregion
 
         #region Constructors
         static Stock()
         {
-            InputDevices = new List<InputDevice>();
+            Keyboards = new List<Keyboard>();
         }
         #endregion
 
         #region Methods
-        public static void AddInputDevice(InputDevice device)
+        public static void AddKeyboard(Keyboard Keyboard)
         {
-            InputDevices.Add(device);
-
+            using (var model = new HardwareModel())
+            {
+                model.Keyboards.Add(Keyboard);
+                model.SaveChanges();
+            }
         }
                 
-        public static void CreateInputDevices()
+        public static void CreateKeyboards()
         {
-            foreach (var device in InputDevices)
+            foreach (var keyboard in Keyboards)
             {
-                Console.WriteLine("DeviceName: {0}, Brand: {1}, Model: {2}, SerialNumber: {3}",
-                    device.DeviceName, device.Brand, device.Model, device.SerialNumber);
+                Console.WriteLine("Id: {0}, Model: {1}, SerialNumber: {2}, Price: {3}",
+                    keyboard.Id, keyboard.Model, keyboard.SerialNumber, keyboard.Price);
                 //Console.Read();
 
                 

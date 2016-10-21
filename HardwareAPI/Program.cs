@@ -11,23 +11,25 @@ namespace HardwareAPI
 
         static void Main(string[] args)
         {
-            //var device = new InputDevice();
-            //device.DeviceName = "KeyBoard";
-            //device.Brand = "Logitech";
-            //device.Model = "MB110LL/B";
-            //device.SerialNumber = "1508LZ00AR68";
-            //device.Count = 10;
-            //Stock.AddInputDevice(device);
+            var device = new Keyboard();
+            device.Id = 1;
+            device.Model = "MB110LL/B";
+            device.SerialNumber = "1508LZ00AR68";
+            device.Price = 34.18M;
+            device.Count = 10;
 
-            //device = new InputDevice();
-            //device.DeviceName = "KeyBoard";
-            //device.Brand = "Insignia";
-            //device.Model = "MK200";
-            //device.SerialNumber = "6108LZ0034DF";
-            //device.Count = 35;
-            //Stock.AddInputDevice(device);
+            Stock.AddKeyboard(device);
 
-            //Stock.CreateInputDevices();
+            device = new Keyboard();
+            device.Id = 2;
+            device.Model = "MK200";
+            device.SerialNumber = "6108LZ0034DF";
+            device.Price = 29.99M;
+            device.Count = 35;
+
+            Stock.AddKeyboard(device);
+
+            Stock.CreateKeyboards();
 
 
         }
