@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,12 @@ namespace HardwareAPI
         public decimal Price { get; set; }
         public string Commentary { get; set; }
         public int Count { get; set; }
-        
+
+        [ForeignKey("Brand")]
+        public int BrandId { get; set; }
+
+        public virtual Brand Brand { get; set; }
+
         #endregion
 
         #region Methods

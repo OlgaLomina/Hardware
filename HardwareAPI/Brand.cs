@@ -14,6 +14,9 @@ namespace HardwareAPI
         public int Id { get; set; }
         public string Name { get; set; } // Brand of the Keyboard : Logitech, Insignia, Apple etc
 
+        public virtual ICollection<Keyboard> Keyboards { get; set; }
+        
+
         #endregion
     }
 }

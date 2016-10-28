@@ -21,6 +21,8 @@ namespace HardwareAPI
         public string Commentary { get; set; }
         public int Count { get; set; }
 
+       
+
         #endregion
     }
 }

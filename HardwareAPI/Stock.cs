@@ -19,13 +19,6 @@ namespace HardwareAPI
 
         #endregion
 
-        #region Constructors
-        static Stock()
-        {
-            Keyboards = new List<Keyboard>();
-        }
-        #endregion
-
         #region Methods
         public static void AddKeyboard(Keyboard Keyboard)
         {
@@ -38,15 +31,15 @@ namespace HardwareAPI
                 
         public static void CreateKeyboards()
         {
-            foreach (var keyboard in Keyboards)
+            using (var model = new HardwareModel())
             {
-                Console.WriteLine("Id: {0}, Model: {1}, SerialNumber: {2}, Price: {3}",
-                    keyboard.Id, keyboard.Model, keyboard.SerialNumber, keyboard.Price);
-                //Console.Read();
-
-                
+                foreach (var keyboard in model.Keyboards)
+                {
+                    Console.WriteLine("Id: {0}, Model: {1}, SerialNumber: {2}, Price: {3}",
+                        keyboard.Id, keyboard.Model, keyboard.SerialNumber, keyboard.Price);
+                    //Console.Read();
+                }
             }
-
         }
         #endregion
 
