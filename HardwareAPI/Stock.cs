@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace HardwareAPI
 {
+    public enum SaleTypes
+    {
+        Keyboard,
+        Mouse,
+        Computer
+    }
     public static class Stock
     {
         #region Properties
@@ -14,8 +20,8 @@ namespace HardwareAPI
 
         public static string Address { get; set; }
 
-        // Collection of Keyboards
-        public static List<Keyboard> Keyboards { get; set; }
+        //// Collection of Keyboards
+        //public static List<Keyboard> Keyboards { get; set; }
 
         #endregion
 

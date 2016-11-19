@@ -23,6 +23,9 @@ namespace HardwareAPI
         public virtual DbSet<Keyboard> Keyboards { get; set; }
         public virtual DbSet<Mouse> Mice { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Sale> Sales { get; set; }
+
     }
 
     //public class MyEntity

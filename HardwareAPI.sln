@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareAPI", "HardwareAPI\HardwareAPI.csproj", "{FBA2F5AC-198D-49F5-A61E-1FA676E6B103}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockUI", "StockUI\StockUI.csproj", "{8CB9A711-1076-42CE-B5AF-8EB80D610C44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FBA2F5AC-198D-49F5-A61E-1FA676E6B103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA2F5AC-198D-49F5-A61E-1FA676E6B103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBA2F5AC-198D-49F5-A61E-1FA676E6B103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB9A711-1076-42CE-B5AF-8EB80D610C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB9A711-1076-42CE-B5AF-8EB80D610C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB9A711-1076-42CE-B5AF-8EB80D610C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB9A711-1076-42CE-B5AF-8EB80D610C44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
