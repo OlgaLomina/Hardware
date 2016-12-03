@@ -86,10 +86,10 @@ namespace HardwareAPI
                     default:
                         break;
                 }
-                Console.WriteLine(choice);
+                //Console.WriteLine(choice);
             }
             
-            Console.WriteLine(choice);
+            //Console.WriteLine(choice);
 
             //Stock.CreateKeyboards();
             

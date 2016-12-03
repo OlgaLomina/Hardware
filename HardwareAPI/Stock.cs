@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace HardwareAPI
 {
@@ -35,16 +36,12 @@ namespace HardwareAPI
             }
         }
                 
-        public static void CreateKeyboards()
+        public static List<Keyboard> GetKeyboards()
         {
             using (var model = new HardwareModel())
             {
-                foreach (var keyboard in model.Keyboards)
-                {
-                    Console.WriteLine("Id: {0}, Model: {1}, SerialNumber: {2}, Price: {3}",
-                        keyboard.Id, keyboard.Model, keyboard.SerialNumber, keyboard.Price);
-                    //Console.Read();
-                }
+                var keyboards = model.Keyboards.Include(k => k.Brand);
+                return keyboards.ToList();
             }
         }
         #endregion

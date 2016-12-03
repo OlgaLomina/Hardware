@@ -17,8 +17,8 @@ namespace StockUI.Controllers
         // GET: Keyboards
         public ActionResult Index()
         {
-            var keyboards = db.Keyboards.Include(k => k.Brand);
-            return View(keyboards.ToList());
+            var keyboards = Stock.GetKeyboards();
+            return View(keyboards);
         }
 
         // GET: Keyboards/Details/5
@@ -37,6 +37,7 @@ namespace StockUI.Controllers
         }
 
         // GET: Keyboards/Create
+        [HttpGet]
         public ActionResult Create()
         {
             ViewBag.BrandId = new SelectList(db.Brands, "Id", "Name");
@@ -48,12 +49,11 @@ namespace StockUI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Model,SerialNumber,Wireless,Color,Price,Commentary,Count,BrandId")] Keyboard keyboard)
+        public ActionResult Create([Bind(Include = "Model,SerialNumber,Wireless,Color,Price,Commentary,Count,BrandId")] Keyboard keyboard)
         {
             if (ModelState.IsValid)
             {
-                db.Keyboards.Add(keyboard);
-                db.SaveChanges();
+                Stock.AddKeyboard(keyboard);               
                 return RedirectToAction("Index");
             }
 
