@@ -46,10 +46,11 @@ namespace StockUI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] Brand brand)
+        public ActionResult Create([Bind(Include = "Id,Name,Country")] Brand brand)
         {
             if (ModelState.IsValid)
             {
+                brand.FullName = brand.Name + " " + brand.Country;
                 db.Brands.Add(brand);
                 db.SaveChanges();
                 return RedirectToAction("Index");

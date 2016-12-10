@@ -40,7 +40,7 @@ namespace StockUI.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.BrandId = new SelectList(db.Brands, "Id", "Name");
+            ViewBag.BrandId = new SelectList(db.Brands.OrderBy(a => a.Name), "Id", "FullName");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace StockUI.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.BrandId = new SelectList(db.Brands, "Id", "Name", keyboard.BrandId);
+            ViewBag.BrandId = new SelectList(db.Brands.OrderBy(a => a.Name), "Id", "FullName", keyboard.BrandId);
             return View(keyboard);
         }
 

@@ -69,3 +69,5 @@ C:\Github\Hardware\StockUI\obj\Debug\StockUI.csprojResolveAssemblyReference.cach
 C:\Github\Hardware\StockUI\obj\Debug\StockUI.dll
 C:\Github\Hardware\StockUI\obj\Debug\StockUI.pdb
 C:\Github\Hardware\StockUI\bin\HardwareAPI.dll
+C:\Github\Hardware\StockUI\obj\Debug\StockUI.Migrations.Initial.resources
+C:\Github\Hardware\StockUI\obj\Debug\StockUI.csproj.GenerateResource.Cache

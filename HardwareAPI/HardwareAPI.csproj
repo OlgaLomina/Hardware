@@ -61,6 +61,23 @@
     <Compile Include="Brand.cs" />
     <Compile Include="HardwareModel.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="Migrations\201611190721383_InitialCreate.cs" />
+    <Compile Include="Migrations\201611190721383_InitialCreate.Designer.cs">
+      <DependentUpon>201611190721383_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100346234_CountryChange.cs" />
+    <Compile Include="Migrations\201612100346234_CountryChange.Designer.cs">
+      <DependentUpon>201612100346234_CountryChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100427294_RequiredChange.cs" />
+    <Compile Include="Migrations\201612100427294_RequiredChange.Designer.cs">
+      <DependentUpon>201612100427294_RequiredChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100523429_FullNameChange.cs" />
+    <Compile Include="Migrations\201612100523429_FullNameChange.Designer.cs">
+      <DependentUpon>201612100523429_FullNameChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mouse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +87,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611190721383_InitialCreate.resx">
+      <DependentUpon>201611190721383_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100346234_CountryChange.resx">
+      <DependentUpon>201612100346234_CountryChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100427294_RequiredChange.resx">
+      <DependentUpon>201612100427294_RequiredChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100523429_FullNameChange.resx">
+      <DependentUpon>201612100523429_FullNameChange.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
